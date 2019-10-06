@@ -19,5 +19,7 @@ public class Encoding {
         return this.key;
     }
 
-
+    public String getOutput() {
+        return this.output;
+    }
 }
