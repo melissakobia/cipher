@@ -24,6 +24,12 @@ public class DecodingTest {
         assertEquals(3, newDecoder.getKey());
     }
 
+    @Test
+    public void decoder_DecryptsUppercaseCharacterD_A() {
+        Decoding newDecoder = new Decoding("D",3);
+        assertEquals("A", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
+
+    }
 
 
 }
