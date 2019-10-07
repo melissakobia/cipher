@@ -51,12 +51,11 @@ public class EncodingTest {
         assertEquals("QFED", newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()));
 
     }
-
-
-
-
-
-
+    @Test
+    public void encoder_EncryptsASentence_Ymj_Qfed() {
+        Encoding newEncoder = new Encoding("The Lazy", 5);
+        assertEquals("Ymj Qfed", newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()));
+    }
 
 
 }
