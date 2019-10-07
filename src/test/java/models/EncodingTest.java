@@ -39,6 +39,15 @@ public class EncodingTest {
         assertEquals("p", newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()));
     }
 
+    @Test
+    public void encoder_EncryptsAWordInLowecase_qfed() {
+        Encoding newEncoder = new Encoding("lazy",5);
+        assertEquals("qfed", newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()));
+    }
+
+
+
+
 
 
 }
