@@ -31,5 +31,27 @@ public class DecodingTest {
 
     }
 
+    @Test
+    public void decoder_DecryptsLowercaseCharacterp_m() {
+        Decoding newDecoder = new Decoding("p",3);
+        assertEquals("m", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
+    }
+
+    @Test
+    public void decoder_DecryptsAWordInLowecase_lazy() {
+        Decoding newDecoder = new Decoding("qfed",5);
+        assertEquals("lazy", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
+    }
+
+    @Test
+    public void decoder_DecryptsAWordInUppercase_LAZY() {
+        Decoding newDecoder = new Decoding("QFED",5);
+        assertEquals("LAZY", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
+
+    }
+
+
+
+
 
 }
