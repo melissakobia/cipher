@@ -49,9 +49,11 @@ public class DecodingTest {
         assertEquals("LAZY", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
 
     }
-
-
-
+    @Test
+    public void decoder_DecryptsASentence_The_Lazy() {
+        Decoding newDecoder = new Decoding("Ymj Qfed", 5);
+        assertEquals("The Lazy", newDecoder.decoder(newDecoder.getInput(),newDecoder.getKey()));
+    }
 
 
 }
