@@ -33,5 +33,12 @@ public class EncodingTest {
 
     }
 
+    @Test
+    public void encoder_EncryptsLowercaseCharacterm_p() {
+        Encoding newEncoder = new Encoding("m",3);
+        assertEquals("p", newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()));
+    }
+
+
 
 }
