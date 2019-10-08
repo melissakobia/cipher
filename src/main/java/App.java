@@ -8,6 +8,10 @@ public class App {
     public static void main (String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
+        System.out.println("WELCOME TO CEASER CIPHER");
+        System.out.println("");
+
+
         System.out.println("Enter a text : ");
         String inputString = myScanner.nextLine();
 
@@ -19,6 +23,7 @@ public class App {
 
         Decoding newDecoder = new Decoding(inputString, keyInt);
         String encryptText = newEncoder.encoder(newEncoder.getInput(),newEncoder.getKey()) ;
+
 
         System.out.println("PLAIN TEXT: " + inputString);
 
